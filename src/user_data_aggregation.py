@@ -84,13 +84,13 @@ def update_followers(users=None, skip=None, nr_new_following=200):
                     sleep(1)
                 elif api.LastResponse.status_code == 429:
                     sleep(300)
-                max_idx = idx
+                max_idx += 1
         except KeyboardInterrupt:
             logger.info('Interrupted by user. Saving file, then exiting.')
             write_users(users)
             exit()
 
-        logger.info(f'Unfollowed {max_idx} people.')
+        logger.info(f'Followed {max_idx} people.')
 
     if 'unfollow' in skip:
         pass
