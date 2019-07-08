@@ -1,4 +1,3 @@
-logs/*
 .ipynb_checkpoints
 ig_images/*/*.jpg
 artefacts/backup
